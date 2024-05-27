@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define True 1
-#define rows 146
+#define rows 6
 
 char *fill_spaces() {
 	char *spaces = malloc(rows*2);
@@ -16,16 +16,14 @@ void pyramid(char *spaces) {
 	int reverse = rows-1;
 	char a[2] = { '*','\0' };
 	char b[rows * 2];
-	char c[rows * 2];
 	b[0] = '\0';
-	c[0] = '\0';
 	for (int i = 0; i < rows; i++) {
-		printf("%s%s%s%s\n", spaces, a, b, c);
+		printf("%s%s%s%s\n", spaces, a, b, b);
 		if (i + 1 <= rows) {
 			b[i] = '*';
 			b[i + 1] = '\0';
-			c[i] = '*';
-			c[i + 1] = '\0';
+			b[i + 2] = '*';
+			b[i + 3] = '\0';
 			spaces[reverse] = '\0';
 		}
 		reverse--;
