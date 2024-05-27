@@ -18,13 +18,11 @@ void pyramid(char *spaces) {
 	b[0] = '\0';
 	for (int i = 0; i < rows; i++) {
 		printf("%s%s%s%s\n", spaces, a, b, b);
-		if (i + 1 <= rows) {
-			b[i] = '*';
-			b[i + 1] = '\0';
-			b[i + 2] = '*';
-			b[i + 3] = '\0';
-			spaces[reverse] = '\0';
-		}
+		b[i] = '*';
+		b[i + 1] = '\0';
+		b[i + 2] = '*';
+		b[i + 3] = '\0';
+		spaces[reverse] = '\0';
 		reverse--;
 	}
 }
