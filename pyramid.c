@@ -31,7 +31,6 @@ void pyramid(char *spaces) {
 
 int main(){
 	char *spaces = fill_spaces();
-	//printf("%s", spaces);
 	pyramid(spaces);
 	free(spaces);
 	return 0;
