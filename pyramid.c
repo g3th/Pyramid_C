@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define True 1
 #define rows 6
 
 char *fill_spaces() {
